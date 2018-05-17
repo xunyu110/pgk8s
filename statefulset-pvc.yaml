@@ -1,0 +1,11 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata: 
+  name: statefulset-pgdata-pvc
+spec: 
+  volumeName: "statefulset-pgdata"
+  storageClassName: manual
+  accessModes: ["ReadWriteMany"]
+  resources: 
+    requests: 
+      storage: "5Gi"
